@@ -9,7 +9,7 @@ import java.sql.SQLException;
 public class VehicleDao {
     private final Connection connection;
     private final String saveSQL = "INSERT INTO VEHICLES (id,name,number_Of_Wheels,number_Of_Doors,type_of_wehicle) VALUES (?, ?, ?, ?, ?)";
-    private final String findVehicleByIdSQL = "SELECT * FROM VEHICLES WHERE id = ?";
+    //private final String findVehicleByIdSQL = "SELECT * FROM VEHICLES WHERE id = ?";
 
     public VehicleDao(Connection connection) {
         this.connection = connection;
@@ -36,7 +36,7 @@ public class VehicleDao {
         }
     }
 
-    public void findVehicleById(long id) {
-
-    }
+//    public void findVehicleById(long id) {
+//
+//    }
 }
