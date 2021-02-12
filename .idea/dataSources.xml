@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="MySQL - vehicle@localhost" uuid="6d1899a1-5a09-441b-9b3c-ddc3e2585cc3">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost:3306/vehicle?serverTimezone=UTC</jdbc-url>
+    </data-source>
+    <data-source source="LOCAL" name="@AWS" uuid="7da82e75-9e09-4d80-89e0-2ee0cc1693c2">
+      <driver-ref>mysql.8</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://database-1.cmkmth7ttyny.eu-central-1.rds.amazonaws.com:3306/home_work</jdbc-url>
+    </data-source>
+  </component>
+</project>
