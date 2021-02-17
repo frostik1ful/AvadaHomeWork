@@ -1,6 +1,6 @@
-package main.database.dao;
+package homeWork1.database.dao;
 
-import main.database.entity.Vehicle;
+import homeWork1.database.entity.Vehicle;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

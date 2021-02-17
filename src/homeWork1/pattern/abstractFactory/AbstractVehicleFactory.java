@@ -1,6 +1,6 @@
-package main.pattern.abstractFactory;
+package homeWork1.pattern.abstractFactory;
 
-import main.database.entity.Vehicle;
+import homeWork1.database.entity.Vehicle;
 
 public interface AbstractVehicleFactory {
     Vehicle createCar();

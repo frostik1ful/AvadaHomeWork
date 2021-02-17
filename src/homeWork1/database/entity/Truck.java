@@ -1,4 +1,4 @@
-package main.database.entity;
+package homeWork1.database.entity;
 
 public class Truck extends Vehicle{
     public Truck(String name, int numberOfWheels, int numberOfDoors) {

@@ -1,6 +1,6 @@
-package main.database.connector;
+package homeWork1.database.connector;
 
-import main.pattern.builder.ConnectionBuilder;
+import homeWork1.pattern.builder.ConnectionBuilder;
 
 import java.sql.Connection;
 import java.sql.SQLException;

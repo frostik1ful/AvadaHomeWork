@@ -1,6 +1,6 @@
-package main.pattern.factory;
+package homeWork1.pattern.factory;
 
-import main.database.entity.*;
+import homeWork1.database.entity.*;
 
 public class VehicleFactory {
     public Vehicle createCar(String name, int numberOfWheels, int numberOfDoors) {

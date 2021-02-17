@@ -1,4 +1,4 @@
-package main.database.entity;
+package homeWork1.database.entity;
 
 public class Bus extends Vehicle{
     public Bus(String name, int numberOfWheels, int numberOfDoors) {

@@ -1,4 +1,4 @@
-package main.pattern.builder;
+package homeWork1.pattern.builder;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

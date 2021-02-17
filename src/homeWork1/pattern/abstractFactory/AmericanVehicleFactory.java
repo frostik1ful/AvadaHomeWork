@@ -1,6 +1,6 @@
-package main.pattern.abstractFactory;
+package homeWork1.pattern.abstractFactory;
 
-import main.database.entity.*;
+import homeWork1.database.entity.*;
 
 public class AmericanVehicleFactory implements AbstractVehicleFactory{
     @Override

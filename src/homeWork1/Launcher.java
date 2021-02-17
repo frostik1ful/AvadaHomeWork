@@ -1,13 +1,12 @@
-package main;
+package homeWork1;
 
-import main.database.connector.Connector;
-import main.database.dao.VehicleDao;
-import main.database.entity.Car;
-import main.database.entity.Vehicle;
-import main.pattern.abstractFactory.AbstractVehicleFactory;
-import main.pattern.abstractFactory.AmericanVehicleFactory;
-import main.pattern.abstractFactory.GermanyVehicleFactory;
-import main.pattern.factory.VehicleFactory;
+import homeWork1.database.connector.Connector;
+import homeWork1.database.dao.VehicleDao;
+import homeWork1.database.entity.Vehicle;
+import homeWork1.pattern.abstractFactory.AbstractVehicleFactory;
+import homeWork1.pattern.abstractFactory.AmericanVehicleFactory;
+import homeWork1.pattern.abstractFactory.GermanyVehicleFactory;
+import homeWork1.pattern.factory.VehicleFactory;
 
 import java.util.ArrayList;
 import java.util.List;
