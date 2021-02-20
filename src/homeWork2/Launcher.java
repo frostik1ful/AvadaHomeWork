@@ -25,8 +25,7 @@ import homeWork2.pattern.proxy.*;
 public class Launcher {
     public static void main(String[] args) {
 
-        //adapterфыв
-        //asd
+        //adaptr
         Printer printer = new Printer();
         IPrinter adapter = new ArrayToStringAdapter(printer);
         Writer writer = new Writer(adapter);
