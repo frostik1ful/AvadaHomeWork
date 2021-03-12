@@ -5,10 +5,11 @@ import homeWork4.mvc.model.Model;
 
 public class HtmlView implements View{
    private String info="";
+   private Controller controller;
 
-
-
-
+    public HtmlView(Controller controller) {
+        this.controller = controller;
+    }
 
     @Override
     public void setModel(Model model) {
@@ -17,6 +18,7 @@ public class HtmlView implements View{
 
     @Override
     public void show() {
+        this.controller.getInfoFromFile(this);
         System.out.println(info);
     }
 }

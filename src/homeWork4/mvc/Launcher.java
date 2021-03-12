@@ -9,11 +9,8 @@ import homeWork4.mvc.view.View;
 public class Launcher {
     public static void main(String[] args) {
         Controller controller = new Controller();
-        View consoleView = new ConsoleView();
-        View htmlView = new HtmlView();
-
-        controller.getInfoFromDatabase(consoleView);
-        controller.getInfoFromFile(htmlView);
+        View consoleView = new ConsoleView(controller);
+        View htmlView = new HtmlView(controller);
 
         consoleView.show();
         htmlView.show();

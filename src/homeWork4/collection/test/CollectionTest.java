@@ -11,7 +11,7 @@ import java.util.*;
 public class CollectionTest {
 
     @Test
-    public void ListSpeedTest(){
+    public void ListSpeedTest() {
         long linkedListInsertTime;
         long arrayListInsertTime;
 
@@ -27,14 +27,13 @@ public class CollectionTest {
         }
         User student = new User("Name");
         arrayListInsertTime = System.nanoTime();
-        arrayList.add(0,student);
+        arrayList.add(0, student);
         arrayListInsertTime = System.nanoTime() - arrayListInsertTime;
 
         linkedListInsertTime = System.nanoTime();
-        linkedList.add(0,student);
+        linkedList.add(0, student);
         linkedListInsertTime = System.nanoTime() - linkedListInsertTime;
-        System.out.println("arrayInsertTime "+arrayListInsertTime+" linkedInsertTime "+linkedListInsertTime);
-
+        System.out.println("arrayInsertTime " + arrayListInsertTime + " linkedInsertTime " + linkedListInsertTime);
 
 
         linkedListGetTime = System.nanoTime();
@@ -45,24 +44,26 @@ public class CollectionTest {
         arrayList.get(50000);
         arrayListGetTime = System.nanoTime() - arrayListGetTime;
 
-        System.out.println("arraygetTime "+arrayListGetTime+" linkedgetTime "+linkedListGetTime);
+        System.out.println("arraygetTime " + arrayListGetTime + " linkedgetTime " + linkedListGetTime);
 
         Assert.assertTrue(linkedListInsertTime < arrayListInsertTime);
         Assert.assertTrue(linkedListGetTime > arrayListGetTime);
 
     }
+
     @Test
-    public void listTest(){
+    public void listTest() {
         Stack<User> stack = new Stack<>();
         User first = new User("first");
         User second = new User("second");
         stack.push(first);
         stack.push(second);
 
-        Assert.assertEquals(second,stack.peek());
+        Assert.assertEquals(second, stack.peek());
     }
+
     @Test
-    public void queueTest(){
+    public void queueTest() {
         PriorityQueue<String> priorityQueue = new PriorityQueue<>();
         ArrayDeque<String> arrayDeque = new ArrayDeque<>();
         priorityQueue.add("first");
@@ -71,12 +72,13 @@ public class CollectionTest {
         arrayDeque.addLast("first");
         arrayDeque.addFirst("second");
 
-        Assert.assertEquals(priorityQueue.peek(),arrayDeque.pollLast());
-        Assert.assertNotEquals(priorityQueue.size(),arrayDeque.size());
+        Assert.assertEquals(priorityQueue.peek(), arrayDeque.pollLast());
+        Assert.assertNotEquals(priorityQueue.size(), arrayDeque.size());
 
     }
+
     @Test
-    public void setTest(){
+    public void setTest() {
         HashSet<Integer> hashSet = new HashSet<>();
         LinkedHashSet<Integer> linkedHashSet = new LinkedHashSet<>();
         hashSet.add(5);
@@ -91,26 +93,29 @@ public class CollectionTest {
         Iterator<Integer> linkedHashSetIter = linkedHashSet.iterator();
 
         hashSetIter.next();
-        Assert.assertEquals(hashSetIter.next(),linkedHashSetIter.next());
+        Assert.assertEquals(hashSetIter.next(), linkedHashSetIter.next());
 
 
         Comparator<User> nameComparator = Comparator.comparing(User::getName);
+
 
         TreeSet<User> treeSet = new TreeSet<>(nameComparator);
         User Dima = new User("Dima");
         User Kostya = new User("Kostya");
         treeSet.add(Kostya);
         treeSet.add(Dima);
+        
 
         System.out.println(treeSet);
-        Assert.assertEquals(treeSet.pollFirst(),Dima);
+        Assert.assertEquals(treeSet.pollFirst(), Dima);
     }
+
     @Test
-    public void mapTest(){
-        HashMap<Key,Student> map = new HashMap<>();
-        Student student1 = new Student("name1",0);
-        Student student2 = new Student("name2",0);
-        Student student3 = new Student("name3",0);
+    public void mapTest() {
+        HashMap<Key, Student> map = new HashMap<>();
+        Student student1 = new Student("name1", 0);
+        Student student2 = new Student("name2", 0);
+        Student student3 = new Student("name3", 0);
 
         Key key1 = new Key("key1");
         Key key2 = new Key("key2");
@@ -118,18 +123,18 @@ public class CollectionTest {
         key2.setFakeHashCode(key1.hashCode());
         key3.setFakeHashCode(key1.hashCode());
 
-        map.put(key1,student1);
-        map.put(key2,student2);
-        map.put(key3,student3);
+        map.put(key1, student1);
+        map.put(key2, student2);
+        map.put(key3, student3);
 
         System.out.println(map.size());
-        Assert.assertEquals(3,map.size());
+        Assert.assertEquals(3, map.size());
 
-        LinkedHashMap<Integer,Integer> linkedHashMap = new LinkedHashMap<>();
+        LinkedHashMap<Integer, Integer> linkedHashMap = new LinkedHashMap<>();
 
-        linkedHashMap.put(5,1);
-        linkedHashMap.put(4,2);
-        linkedHashMap.put(3,3);
+        linkedHashMap.put(5, 1);
+        linkedHashMap.put(4, 2);
+        linkedHashMap.put(3, 3);
 
         System.out.println(linkedHashMap);
 
@@ -141,17 +146,17 @@ public class CollectionTest {
         Key keyB = new Key("b");
         Key keyC = new Key("c");
 
-        treeMap.put(keyC,student3);
-        treeMap.put(keyA,student1);
-        treeMap.put(keyB,student2);
+        treeMap.put(keyC, student3);
+        treeMap.put(keyA, student1);
+        treeMap.put(keyB, student2);
 
 
         System.out.println(treeMap);
         Iterator<Student> iterator = treeMap.values().iterator();
 
-        Assert.assertEquals(iterator.next(),student1);
-        Assert.assertEquals(iterator.next(),student2);
-        Assert.assertEquals(iterator.next(),student3);
+        Assert.assertEquals(iterator.next(), student1);
+        Assert.assertEquals(iterator.next(), student2);
+        Assert.assertEquals(iterator.next(), student3);
 
 
     }
